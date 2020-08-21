@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,4 +18,13 @@ use Illuminate\Http\Request;
 // Route::group(array('prefix'=>'api'),function(){
 // 	Route::resource('kontak','ControllerKontak',array('except'=>array('create','edit')));
 // });
+Route::group([
+  'prefix' => 'auth'
+], function ($router) {
+  Route::post('login', 'AuthController@login');
+  Route::post('logout', 'AuthController@logout');
+  Route::post('refresh', 'AuthController@refresh');
+  Route::post('me', 'AuthController@me');
+
+});
 Route::resource('kontak', 'ControllerKontak', array('except'=>array('create','edit')));
