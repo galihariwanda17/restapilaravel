@@ -27,4 +27,4 @@ Route::group([
   Route::post('me', 'AuthController@me');
 
 });
-Route::resource('kontak', 'ControllerKontak', array('except'=>array('create','edit')));
+Route::resource('kontak', 'KontakController', array('except'=>array('create','edit')));

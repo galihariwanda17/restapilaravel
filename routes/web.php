@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/kontak', ['as' => 'kontak.all', 'uses' => 'ControllerKontak@index']);
-Route::get('/kontak/{id}', [ 'as' => 'kontak.id', 'uses' => 'ControllerKontak@show']);
-// Route::post('/kontak/store', [ 'as' => 'kontak.store', 'uses' => 'ControllerKontak@store']);
-// Route::put('/kontak/update/{id}', [ 'as' => 'kontak.update', 'uses' => 'ControllerKontak@update']);
-// Route::delete('/kontak/delete/{id}', [ 'as' => 'kontak.delete', 'uses' => 'ControllerKontak@destroy']);
+Route::get('/kontak', ['as' => 'kontak.all', 'uses' => 'KontakController@index']);
+Route::get('/kontak/{id}', [ 'as' => 'kontak.id', 'uses' => 'KontakController@show']);
+// Route::post('/kontak/store', [ 'as' => 'kontak.store', 'uses' => 'KontakController@store']);
+// Route::put('/kontak/update/{id}', [ 'as' => 'kontak.update', 'uses' => 'KontakController@update']);
+// Route::delete('/kontak/delete/{id}', [ 'as' => 'kontak.delete', 'uses' => 'KontakController@destroy']);

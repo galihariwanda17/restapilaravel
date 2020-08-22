@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Kontak;
 
-class ControllerKontak extends Controller
+class KontakController extends Controller
 {
     /**
      * Create a new AuthController instance.
